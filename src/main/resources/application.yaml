@@ -1,0 +1,41 @@
+spring:
+  application:
+      name: authorization_service
+
+  security:
+    jwt:
+      secret-key-access:
+      expiration-time-access: 300 000
+      expiration-time-refresh: 2592000000
+
+
+
+  jpa:
+    database: postgresql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/user_management
+    username: admin
+    password: admin
+    driver-class-name: org.postgresql.Driver
+  kafka:
+    bootstrap-servers: localhost:29092
+
+
+
+
+
+
+
+server:
+  port: 8081
+
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka/
+
